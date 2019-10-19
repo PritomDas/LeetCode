@@ -1,0 +1,6 @@
+Python String | replace()
+replace() is an inbuilt function in Python programming language that returns a copy of the string where all occurrences of a substring is replaced with another substring.
+
+Syntax :
+
+string.replace(old, new, count)
