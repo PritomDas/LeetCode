@@ -4,7 +4,7 @@ class Solution:
         for c in s:
             if c == 'L':
               count += 1   
-            elif c == 'R':
+            else:
                 count-=1
                 
             if count == 0:
