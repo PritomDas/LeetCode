@@ -1,0 +1,9 @@
+I have implemented two different solutions for reversing the internal contents in a string.
+
+Overall there are various concepts that can be utilised for string reversal in python:
+  [a] using splicing
+  [b] using inbuilt function "reversed" along with "join"
+  [c] using two pointer concept
+  [d] using looping {specially the while loop}
+  
+ I have uploaded the first two concepts
