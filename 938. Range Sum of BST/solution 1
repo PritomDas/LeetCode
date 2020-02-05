@@ -1,0 +1,28 @@
+class Solution:
+    def rangeSumBST(self, root: TreeNode, L: int, R: int) -> int:
+        if root == None: return 0
+        if root.val > R: return self.rangeSumBST(root.left,L,R)
+        if root.val < L: return self.rangeSumBST(root.right,L,R)
+        return root.val + self.rangeSumBST(root.left,L,R) + self.rangeSumBST(root.right,L,R)# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def rangeSumBST(self, root: TreeNode, L: int, R: int) -> int:
+        
+        #if root node is empty
+        if root == None:
+            return 0
+        
+        #if L is bigger than my root node, then the range for finding the sum must exist over the right sub tree
+        if root.val < L:
+            return self.rangeSumBST(root.right, L, R)
+        
+        #if R is smaller than my root node, then it exists over left sub tree
+        if root.val > R:
+            return self.rangeSumBST(root.left, L, R)
+        
+        return root.val + self.rangeSumBST(root.right, L, R) + self.rangeSumBST(root.left, L, R)
