@@ -1,0 +1,17 @@
+class Solution:
+    def numberOfSteps (self, num: int) -> int:
+        step = 0
+        while num:
+            #condition1
+            if num % 2 == 0:
+                num /= 2
+                
+            #conditon2
+            else:
+                num -= 1
+            
+            #counter variable that I need to return back
+            step += 1
+        
+        return step
+        
