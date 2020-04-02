@@ -1,0 +1,12 @@
+class Solution:
+    def arraysIntersection(self, arr1: List[int], arr2: List[int], arr3: List[int]) -> List[int]:
+	  #coverting lists to sets
+        x= set(arr1)
+        y= set(arr2)
+        z= set(arr3)
+		#using the intersection() on the sets
+        a = x.intersection(y,z)
+		#since the final output expects an answer in lists, I converted the final answer set to list
+        b = list(a)
+		#final submission test cases expects a sorted answer, so I sort the list
+        return(sorted(b))
