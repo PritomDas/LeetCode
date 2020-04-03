@@ -24,3 +24,30 @@ class Solution(object):
             result.append([key, score_map[key] ])
         
         return result
+        
+        
+ Solution 2:
+ 
+ class Solution:
+    def highFive(self, items: List[List[int]]) -> List[List[int]]:
+        dic =  {}  
+        
+        for item in items:
+            if item[0] in dic:
+                dic[item[0]].append(item[1])
+            else:
+                dic[item[0]] = [item[1]]
+        
+        def sort_avg(list):   
+            list = sorted(list, reverse = True)
+            return int(sum(list[0:5])/5)
+        
+        final = []
+        
+        for item in dic:  
+            final.append([item, sort_avg(dic[item])])
+
+        return final
+Store all the coresponding id and a list of this id's scores in dictionary
+Write function sort a list and returns average of top 5
+Go through items in dict and append the final result to a list output
