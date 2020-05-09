@@ -12,11 +12,10 @@ class Solution:
         #simultaneously appending either true or false based on the condition to output list
         for index in range(len(candies)):
             if candies[index] + extraCandies >= MAX:
-                output.append("True")
+                output.append(True)
             else:
-                output.append("False")
-        return output   
-    
+                output.append(False)
+        return output
     
     
     
