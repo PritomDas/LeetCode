@@ -19,3 +19,14 @@ class Solution:
         
         #return the final list
         return output
+    
+    
+    #this code works
+    class Solution:
+    def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
+        MAX = max(candies)
+        for index in range(len(candies)):
+            if candies[index] + extraCandies >= MAX:
+                yield True
+            else:
+                yield False
