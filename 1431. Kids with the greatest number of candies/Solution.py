@@ -1,4 +1,4 @@
-# this code is not giving me the output correctly
+# this code is giving me the output correctly
 
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
