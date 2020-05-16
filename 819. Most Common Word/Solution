@@ -1,0 +1,22 @@
+import collections
+class Solution:
+    def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
+        #converting the paragraph into lowercases
+        paragraph = paragraph.lower()
+        
+        #taking out all the punctuation and replace with blanks
+        for words in paragraph:
+            if words in "!?',;.":
+                paragraph = paragraph.replace(words, " ")
+                
+        #breaking the paragraph into list of words
+        word = paragraph.split()
+        
+        #implementing a dictionary of key-value pair
+        '''here key is the alphabet and value is the number of occurence of that alphabet'''
+        return collections.Counter(w for w in word if w not in banned).most_common(1)[0][0]
+    
+    '''
+TechZoo
+3 months ago
+The [0][0] part has to do with the "most_common" method. The most common(1) method output a tuple in a dictionary, in this case {(ball, 2)}. So, to get "ball", you need to get the first duple and then, get the first element of tuple. So, [0][0]'''
