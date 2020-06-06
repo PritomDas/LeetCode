@@ -1,0 +1,20 @@
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        
+        '''
+		# Flip horizontally
+        for i in range(len(matrix)):
+            matrix[i] = matrix[i][::-1]
+        '''
+        
+        #using inbuilt reverse
+        matrix.reverse()
+        
+        
+		# Transpose
+        for i in range(len(matrix)):
+            for j in range(i, len(matrix)):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
